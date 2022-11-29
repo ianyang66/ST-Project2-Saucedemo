@@ -58,7 +58,7 @@ class Test_Shop(Store_Test):
         prices = []
         i = 0 
         time.sleep(3)
-        for item in self.driver.find_elements(By.CLASS_NAME,'inventory_item_price'):
+        for item in self.driver.find_element(By.CLASS_NAME,'inventory_item_price'):
             number = float(item.text[1:])
             prices.append(number)
         while i < len(prices) - 1:
@@ -74,7 +74,7 @@ class Test_Shop(Store_Test):
         prices = []
         i = 0 
         time.sleep(3)
-        for item in self.driver.find_elements(By.CLASS_NAME,'inventory_item_price'):
+        for item in self.driver.find_element(By.CLASS_NAME,'inventory_item_price'):
             number = float(item.text[1:])
             prices.append(number)
         while i < len(prices) - 1:
@@ -88,7 +88,7 @@ class Test_Shop(Store_Test):
         options.select_by_visible_text('Name (A to Z)')
         names = []
         time.sleep(3)
-        for name in self.driver.find_elements(By.CLASS_NAME,'inventory_item_name'):
+        for name in self.driver.find_element(By.CLASS_NAME,'inventory_item_name'):
             names.append(name.text)
         sorts = sorted(names)
         assert names == sorts
@@ -100,7 +100,7 @@ class Test_Shop(Store_Test):
         options.select_by_visible_text('Name (Z to A)')
         names = []
         time.sleep(3)
-        for name in self.driver.find_elements(By.CLASS_NAME,'inventory_item_name'):
+        for name in self.driver.find_element(By.CLASS_NAME,'inventory_item_name'):
             names.append(name.text)
         reverse = sorted(names, reverse=True)
         assert names == reverse
@@ -110,7 +110,7 @@ class Test_Shop(Store_Test):
         self.login(good_user, all_passwords)
         options = Select(self.driver.find_element(By.CLASS_NAME,'product_sort_container'))
         options.select_by_visible_text('Name (A to Z)')
-        items = self.driver.find_elements(By.CLASS_NAME,'inventory_item_name')
+        items = self.driver.find_element(By.CLASS_NAME,'inventory_item_name')
         items[0].click()
         time.sleep(1)
         assert self.driver.current_url == 'https://www.saucedemo.com/inventory-item.html?id=4'
@@ -120,7 +120,7 @@ class Test_Shop(Store_Test):
         self.login(good_user, all_passwords)
         options = Select(self.driver.find_element(By.CLASS_NAME,'product_sort_container'))
         options.select_by_visible_text('Name (A to Z)')
-        items = self.driver.find_elements(By.CLASS_NAME,'inventory_item_name')
+        items = self.driver.find_element(By.CLASS_NAME,'inventory_item_name')
         items[1].click()
         time.sleep(1)
         assert self.driver.current_url == 'https://www.saucedemo.com/inventory-item.html?id=0'
@@ -130,7 +130,7 @@ class Test_Shop(Store_Test):
         self.login(good_user, all_passwords)
         options = Select(self.driver.find_element(By.CLASS_NAME,'product_sort_container'))
         options.select_by_visible_text('Name (A to Z)')
-        items = self.driver.find_elements(By.CLASS_NAME,'inventory_item_name')
+        items = self.driver.find_element(By.CLASS_NAME,'inventory_item_name')
         items[2].click()
         time.sleep(1)
         assert self.driver.current_url == 'https://www.saucedemo.com/inventory-item.html?id=1'
@@ -140,7 +140,7 @@ class Test_Shop(Store_Test):
         self.login(good_user, all_passwords)
         options = Select(self.driver.find_element(By.CLASS_NAME,'product_sort_container'))
         options.select_by_visible_text('Name (A to Z)')
-        items = self.driver.find_elements(By.CLASS_NAME,'inventory_item_name')
+        items = self.driver.find_element(By.CLASS_NAME,'inventory_item_name')
         items[3].click()
         time.sleep(1)
         assert self.driver.current_url == 'https://www.saucedemo.com/inventory-item.html?id=5'
@@ -150,7 +150,7 @@ class Test_Shop(Store_Test):
         self.login(good_user, all_passwords)
         options = Select(self.driver.find_element(By.CLASS_NAME,'product_sort_container'))
         options.select_by_visible_text('Name (A to Z)')
-        items = self.driver.find_elements(By.CLASS_NAME,'inventory_item_name')
+        items = self.driver.find_element(By.CLASS_NAME,'inventory_item_name')
         items[4].click()
         time.sleep(1)
         assert self.driver.current_url == 'https://www.saucedemo.com/inventory-item.html?id=2'
@@ -160,7 +160,7 @@ class Test_Shop(Store_Test):
         self.login(good_user, all_passwords)
         options = Select(self.driver.find_element(By.CLASS_NAME,'product_sort_container'))
         options.select_by_visible_text('Name (A to Z)')
-        items = self.driver.find_elements(By.CLASS_NAME,'inventory_item_name')
+        items = self.driver.find_element(By.CLASS_NAME,'inventory_item_name')
         items[5].click()
         time.sleep(1)
         assert self.driver.current_url == 'https://www.saucedemo.com/inventory-item.html?id=3'
@@ -170,7 +170,7 @@ class Test_Shop(Store_Test):
         self.login(good_user, all_passwords)
         options = Select(self.driver.find_element(By.CLASS_NAME,'product_sort_container'))
         options.select_by_visible_text('Name (A to Z)')
-        items = self.driver.find_elements(By.XPATH, "//div[@class='inventory_item_img']")
+        items = self.driver.find_element(By.XPATH, "//div[@class='inventory_item_img']")
         items[0].click()
         time.sleep(1)
         assert self.driver.current_url == 'https://www.saucedemo.com/inventory-item.html?id=4'
@@ -180,7 +180,7 @@ class Test_Shop(Store_Test):
         self.login(good_user, all_passwords)
         options = Select(self.driver.find_element(By.CLASS_NAME,'product_sort_container'))
         options.select_by_visible_text('Name (A to Z)')
-        items = self.driver.find_elements(By.XPATH, "//div[@class='inventory_item_img']")
+        items = self.driver.find_element(By.XPATH, "//div[@class='inventory_item_img']")
         items[1].click()
         time.sleep(1)
         assert self.driver.current_url == 'https://www.saucedemo.com/inventory-item.html?id=0'
@@ -191,7 +191,7 @@ class Test_Shop(Store_Test):
         self.login(good_user, all_passwords)
         options = Select(self.driver.find_element(By.CLASS_NAME,'product_sort_container'))
         options.select_by_visible_text('Name (A to Z)')
-        items = self.driver.find_elements(By.XPATH, "//div[@class='inventory_item_img']")
+        items = self.driver.find_element(By.XPATH, "//div[@class='inventory_item_img']")
         items[2].click()
         time.sleep(1)
         assert self.driver.current_url == 'https://www.saucedemo.com/inventory-item.html?id=1'
@@ -202,7 +202,7 @@ class Test_Shop(Store_Test):
         self.login(good_user, all_passwords)
         options = Select(self.driver.find_element(By.CLASS_NAME,'product_sort_container'))
         options.select_by_visible_text('Name (A to Z)')
-        items = self.driver.find_elements(By.XPATH, "//div[@class='inventory_item_img']")
+        items = self.driver.find_element(By.XPATH, "//div[@class='inventory_item_img']")
         items[3].click()
         time.sleep(1)
         assert self.driver.current_url == 'https://www.saucedemo.com/inventory-item.html?id=5'
@@ -213,7 +213,7 @@ class Test_Shop(Store_Test):
         self.login(good_user, all_passwords)
         options = Select(self.driver.find_element(By.CLASS_NAME,'product_sort_container'))
         options.select_by_visible_text('Name (A to Z)')
-        items = self.driver.find_elements(By.XPATH, "//div[@class='inventory_item_img']")
+        items = self.driver.find_element(By.XPATH, "//div[@class='inventory_item_img']")
         items[4].click()
         time.sleep(1)        
         assert self.driver.current_url == 'https://www.saucedemo.com/inventory-item.html?id=2'
@@ -224,7 +224,7 @@ class Test_Shop(Store_Test):
         self.login(good_user, all_passwords)
         options = Select(self.driver.find_element(By.CLASS_NAME,'product_sort_container'))
         options.select_by_visible_text('Name (A to Z)')
-        items = self.driver.find_elements(By.XPATH, "//div[@class='inventory_item_img']")
+        items = self.driver.find_element(By.XPATH, "//div[@class='inventory_item_img']")
         items[5].click()
         time.sleep(1)
         assert self.driver.current_url == 'https://www.saucedemo.com/inventory-item.html?id=3'
