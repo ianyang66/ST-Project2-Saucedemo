@@ -1,0 +1,20 @@
+[
+  "test_login_page.py::Test_Login::test_bad_pass[chrome]",
+  "test_login_page.py::Test_Login::test_bad_pass[firefox]",
+  "test_login_page.py::Test_Login::test_fake_element[chrome]",
+  "test_login_page.py::Test_Login::test_fake_element[firefox]",
+  "test_login_page.py::Test_Login::test_glitch_login[chrome]",
+  "test_login_page.py::Test_Login::test_glitch_login[firefox]",
+  "test_login_page.py::Test_Login::test_locked_login[chrome]",
+  "test_login_page.py::Test_Login::test_locked_login[firefox]",
+  "test_login_page.py::Test_Login::test_problem_login[chrome]",
+  "test_login_page.py::Test_Login::test_problem_login[firefox]",
+  "test_login_page.py::Test_Login::test_valid_login[chrome]",
+  "test_login_page.py::Test_Login::test_valid_login[firefox]",
+  "test_login_page.py::Test_Login::test_valid_login_with_spaces[chrome]",
+  "test_login_page.py::Test_Login::test_valid_login_with_spaces[firefox]",
+  "test_login_page.py::Test_Login::test_wrong_password[chrome]",
+  "test_login_page.py::Test_Login::test_wrong_password[firefox]",
+  "test_login_page.py::Test_Login::test_wrong_username[chrome]",
+  "test_login_page.py::Test_Login::test_wrong_username[firefox]"
+]
